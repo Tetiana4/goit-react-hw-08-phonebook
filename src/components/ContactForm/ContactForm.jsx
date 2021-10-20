@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useAddContactMutation } from '../../redux/Contacts';
-import { Spinner } from '../../Spinner';
-import { Form, Label, Button, Input } from './ContactForm.styled';
+import { Spinner } from '../../Spinner/Spinner';
+import { Label, Form, Button, Input } from './ContactForm.styled';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
