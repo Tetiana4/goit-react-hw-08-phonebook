@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useAddContactMutation } from '../../redux/Contacts';
 import { Spinner } from '../../Spinner';
-import { Label, Button, Input } from './ContactForm.styled';
+import { Form, Label, Button, Input } from './ContactForm.styled';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -29,7 +29,7 @@ export const ContactForm = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <Label htmlFor={nameInputId}>
           Name
           <Input
@@ -59,7 +59,7 @@ export const ContactForm = () => {
           />
         </Label>
         <Button type="submit">{isLoading ? <Spinner /> : 'Add contact'}</Button>
-      </form>
+      </Form>
     </div>
   );
 };
