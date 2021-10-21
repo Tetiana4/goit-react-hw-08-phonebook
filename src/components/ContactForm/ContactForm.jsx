@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-// import { useAddContactMutation } from '../../redux/contacts';
 // import { Spinner } from '../../Spinner/Spinner';
 import * as actions from '../../redux/contacts/actions';
 import { Label, Form, Button, Input } from './ContactForm.styled';
@@ -8,7 +7,6 @@ import { useDispatch } from 'react-redux';
 export const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  // const [addContact, { isLoading }] = useAddContactMutation();
   const nameInputId = uuidv4();
   const numberInputId = uuidv4();
 
