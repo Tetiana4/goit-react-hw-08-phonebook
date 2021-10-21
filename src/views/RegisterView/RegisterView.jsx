@@ -1,10 +1,10 @@
 import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
-// import { authOperations } from '../redux/auth';
-import { Form, Label } from './RegisterView.styled';
+import { useDispatch } from 'react-redux';
+import { authOperations } from '../../redux/auth';
+import { Form, Label, Title, Button } from './RegisterView.styled';
 
 export const RegisterView = () => {
-  //   const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -24,7 +24,7 @@ export const RegisterView = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // dispatch(authOperations.register({ name, email, password }));
+    dispatch(authOperations.register({ name, email, password }));
     setName('');
     setEmail('');
     setPassword('');
@@ -32,7 +32,7 @@ export const RegisterView = () => {
 
   return (
     <div>
-      <h1>Страница регистрации</h1>
+      <Title>Страница регистрации</Title>
 
       <Form onSubmit={handleSubmit} autoComplete="off">
         <Label>
@@ -60,7 +60,7 @@ export const RegisterView = () => {
           />
         </Label>
 
-        <button type="submit">Зарегистрироваться</button>
+        <Button type="submit">Зарегистрироваться</Button>
       </Form>
     </div>
   );
