@@ -32,16 +32,16 @@ export const RegisterView = () => {
 
   return (
     <div>
-      <Title>Страница регистрации</Title>
+      <Title>Registration</Title>
 
       <Form onSubmit={handleSubmit} autoComplete="off">
         <Label>
-          Имя
+          Name
           <input type="text" name="name" value={name} onChange={handleChange} />
         </Label>
 
         <Label>
-          Почта
+          Your name
           <input
             type="email"
             name="email"
@@ -51,7 +51,7 @@ export const RegisterView = () => {
         </Label>
 
         <Label>
-          Пароль
+          Your password
           <input
             type="password"
             name="password"
@@ -60,7 +60,7 @@ export const RegisterView = () => {
           />
         </Label>
 
-        <Button type="submit">Зарегистрироваться</Button>
+        <Button type="submit">Sign up</Button>
       </Form>
     </div>
   );

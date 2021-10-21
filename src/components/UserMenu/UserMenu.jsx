@@ -7,9 +7,9 @@ export const UserMenu = () => {
   const name = useSelector(authSelectors.getUserName);
   return (
     <div>
-      <span>Добро пожаловать, {name}</span>
+      <span>Welcome, {name}</span>
       <button type="button" onClick={() => dispatch(authOperations.logOut())}>
-        Выйти
+        Go out
       </button>
     </div>
   );

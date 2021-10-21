@@ -4,11 +4,11 @@ import { Link } from './Navigation.styled';
 export const Navigation = () => (
   <nav>
     <Link to="/" exact>
-      Главная
+      Home
     </Link>
 
-    <Link to="/todos" exact>
-      Заметки
+    <Link to="/contacts" exact>
+      Notes
     </Link>
   </nav>
 );

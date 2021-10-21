@@ -28,11 +28,11 @@ export const LoginView = () => {
 
   return (
     <div>
-      <h1>Страница логина</h1>
+      <h1>Login page</h1>
 
       <Form onSubmit={handleSubmit} autoComplete="off">
         <Label>
-          Почта
+          Your email
           <input
             type="email"
             name="email"
@@ -42,7 +42,7 @@ export const LoginView = () => {
         </Label>
 
         <Label>
-          Пароль
+          Your password
           <input
             type="password"
             name="password"
@@ -51,7 +51,7 @@ export const LoginView = () => {
           />
         </Label>
 
-        <button type="submit">Войти</button>
+        <button type="submit">Come in</button>
       </Form>
     </div>
   );
