@@ -3,6 +3,6 @@ export {
   useFetchContactsQuery,
   useAddContactMutation,
   useDeleteContactMutation,
-} from './options';
+} from './operations';
 
 export { filterContact } from './actions';
