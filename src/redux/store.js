@@ -44,16 +44,16 @@ const authPersistConfig = {
   storage,
   whitelist: ['token'],
 };
-const contactPersistConfig = {
-  key: 'contacts',
-  storage,
-  blackList: ['filter'],
-};
+// const contactPersistConfig = {
+//   key: 'contacts',
+//   storage,
+//   blackList: ['filter'],
+// };
 
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-    contacts: persistReducer(contactPersistConfig, reducer),
+    contacts: reducer,
   },
   middleware,
   devTools: process.env.NODE_ENV === 'development',
