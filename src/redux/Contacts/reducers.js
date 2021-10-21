@@ -1,6 +1,5 @@
-import { createReducer } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
-// import { filterContact } from './actions';
+import { createReducer } from '@reduxjs/toolkit';
 import * as actions from './actions';
 
 const reducer = createReducer([], {
@@ -10,9 +9,7 @@ const reducer = createReducer([], {
 });
 
 const filter = createReducer('', {
-  [actions.filterContact]: (_state, { payload }) => {
-    return payload;
-  },
+  [actions.filterContact]: (_state, { payload }) => payload,
 });
 
 export default combineReducers({

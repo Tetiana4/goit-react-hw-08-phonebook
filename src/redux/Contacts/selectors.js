@@ -6,3 +6,13 @@ export const getVisibleList = ({ filterValue, contactList }) => {
     contact.name.toLowerCase().includes(filterValue.toLowerCase()),
   );
 };
+// export const getVisibleList = state => {
+//   const contacts = getContacts(state);
+//   const filter = getFilter(state);
+
+//   const normalisedFilter = filter.toLowerCase();
+
+//   return contacts.filter(({ name }) =>
+//     name.toLowerCase().includes(normalisedFilter),
+//   );
+// };
