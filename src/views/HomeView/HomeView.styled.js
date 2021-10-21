@@ -8,6 +8,5 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  fontweight: 500;
-  fontsize: 48;
+  font-size: 48px;
 `;
