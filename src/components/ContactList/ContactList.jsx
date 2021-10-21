@@ -1,24 +1,17 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { ContactListItem } from '../ContactListItem';
-import {
-  useFetchContactsQuery,
-  getFilter,
-  getVisibleList,
-} from '../../redux/contacts';
+import { useSelector } from 'react-redux';
 import { List } from './ContactList.styled';
+import { getVisibleList } from '../../redux/contacts/selectors';
 
 export const ContactList = () => {
-  const { data: contactList } = useFetchContactsQuery();
-  const filterValue = useSelector(state => getFilter(state));
-  const visibledList = getVisibleList({ filterValue, contactList });
+  const contacts = useSelector(getVisibleList);
 
   return (
     <List>
-      {contactList &&
-        visibledList.map(contact => (
-          <ContactListItem key={contact.id} {...contact} />
-        ))}
+      {contacts.map(contact => (
+        <ContactListItem key={contact.id} {...contact} />
+      ))}
     </List>
   );
 };

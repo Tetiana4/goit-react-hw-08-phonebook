@@ -1,16 +1,19 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { useAddContactMutation } from '../../redux/contacts';
-import { Spinner } from '../../Spinner/Spinner';
+// import { useAddContactMutation } from '../../redux/contacts';
+// import { Spinner } from '../../Spinner/Spinner';
+import * as actions from '../../redux/contacts/actions';
 import { Label, Form, Button, Input } from './ContactForm.styled';
-
+import { useDispatch } from 'react-redux';
 export const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  const [addContact, { isLoading }] = useAddContactMutation();
+  // const [addContact, { isLoading }] = useAddContactMutation();
   const nameInputId = uuidv4();
   const numberInputId = uuidv4();
 
+  const dispatch = useDispatch();
+  const propSubmit = value => dispatch(actions.addContact(value));
   const handleChange = event => {
     const { name, value } = event.currentTarget;
     name === 'name' ? setName(value) : setNumber(value);
@@ -23,7 +26,7 @@ export const ContactForm = () => {
     };
 
     event.preventDefault();
-    addContact({ name, number });
+    propSubmit({ name, number });
     resetForm();
   };
 
@@ -58,7 +61,7 @@ export const ContactForm = () => {
             id={numberInputId}
           />
         </Label>
-        <Button type="submit">{isLoading ? <Spinner /> : 'Add contact'}</Button>
+        <Button type="submit">'Add contact'</Button>
       </Form>
     </div>
   );
