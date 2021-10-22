@@ -1,21 +1,3 @@
-// import { configureStore } from '@reduxjs/toolkit';
-// import { setupListeners } from '@reduxjs/toolkit/query';
-// import { contactApi } from './contacts/options';
-
-// import { filter } from './contacts/reducers';
-
-// export const store = configureStore({
-//   reducer: {
-//     [contactApi.reducerPath]: contactApi.reducer,
-//     filter,
-//   },
-//   middleware: getDefaultMiddleware => [
-//     ...getDefaultMiddleware(),
-//     contactApi.middleware,
-//   ],
-// });
-
-// setupListeners(store.dispatch);
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import {
   persistStore,
@@ -44,11 +26,6 @@ const authPersistConfig = {
   storage,
   whitelist: ['token'],
 };
-// const contactPersistConfig = {
-//   key: 'contacts',
-//   storage,
-//   blackList: ['filter'],
-// };
 
 export const store = configureStore({
   reducer: {
