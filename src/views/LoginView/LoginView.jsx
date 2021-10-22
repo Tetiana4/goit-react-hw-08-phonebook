@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Form, Label } from './LoginView.styled';
+import { Form, Label, Button, Title } from './LoginView.styled';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../../redux/auth';
 
@@ -28,7 +28,7 @@ export const LoginView = () => {
 
   return (
     <div>
-      <h1>Login page</h1>
+      <Title>Login page</Title>
 
       <Form onSubmit={handleSubmit} autoComplete="off">
         <Label>
@@ -51,7 +51,7 @@ export const LoginView = () => {
           />
         </Label>
 
-        <button type="submit">Come in</button>
+        <Button type="submit">Come in</Button>
       </Form>
     </div>
   );
