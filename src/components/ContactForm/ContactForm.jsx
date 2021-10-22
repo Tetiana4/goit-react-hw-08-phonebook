@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 // import { Spinner } from '../../Spinner/Spinner';
-import * as actions from '../../redux/contacts/actions';
+import { addContact } from '../../redux/contacts/operations';
 import { Label, Form, Button, Input } from './ContactForm.styled';
 import { useDispatch } from 'react-redux';
 export const ContactForm = () => {
@@ -11,7 +11,6 @@ export const ContactForm = () => {
   const numberInputId = uuidv4();
 
   const dispatch = useDispatch();
-  const propSubmit = value => dispatch(actions.addContact(value));
   const handleChange = event => {
     const { name, value } = event.currentTarget;
     name === 'name' ? setName(value) : setNumber(value);
@@ -24,7 +23,7 @@ export const ContactForm = () => {
     };
 
     event.preventDefault();
-    propSubmit({ name, number });
+    dispatch(addContact({ name, number }));
     resetForm();
   };
 

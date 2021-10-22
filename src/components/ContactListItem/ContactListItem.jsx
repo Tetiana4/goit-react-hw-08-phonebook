@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { ListItem, Span, Button } from './ContactListItem.styled';
-import * as actions from '../../redux/contacts/actions';
+import { deleteContact } from '../../redux/contacts/operations';
 
 export const ContactListItem = ({ id, name, number }) => {
   const dispatch = useDispatch();
-  const onDelete = id => dispatch(actions.deleteContact(id));
+  const onDelete = id => dispatch(deleteContact(id));
   return (
     <ListItem key={id}>
       <Span>{name}</Span>
