@@ -10,7 +10,6 @@ export default function App() {
   return (
     <Container>
       <AppBar />
-
       <Switch>
         <Route exact path="/" component={HomeView} />
         <Route path="/register" component={RegisterView} />
