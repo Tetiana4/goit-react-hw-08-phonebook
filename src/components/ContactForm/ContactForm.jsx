@@ -1,9 +1,9 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-// import { Spinner } from '../../Spinner/Spinner';
 import { addContact } from '../../redux/contacts/operations';
 import { Label, Form, Button, Input } from './ContactForm.styled';
-import { useDispatch } from 'react-redux';
+
 export const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -58,7 +58,7 @@ export const ContactForm = () => {
             id={numberInputId}
           />
         </Label>
-        <Button type="submit">'Add contact'</Button>
+        <Button type="submit">Add contact</Button>
       </Form>
     </div>
   );
