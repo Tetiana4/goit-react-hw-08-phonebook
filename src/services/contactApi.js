@@ -16,3 +16,4 @@ export async function deleteContact(id) {
   await axios.delete(`/contacts/${id}`);
   return id;
 }
+
