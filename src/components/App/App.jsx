@@ -7,8 +7,8 @@ import { LoginView } from '../../views/LoginView/LoginView';
 import { ContactsView } from '../../views/ContactsView';
 import { AppBar } from '../AppBar/AppBar';
 import { authOperations, authSelectors } from '../../redux/auth';
-import PrivateRoute from '../Route/PrivateRoute';
-import PublicRoute from '../Route/PublicRoute';
+import PrivateRoute from '../routes/PrivateRoute';
+import PublicRoute from '../routes/PublicRoute';
 import { Container } from './App.styled';
 
 export default function App() {
