@@ -8,8 +8,6 @@ export const Container = styled.div`
   justify-content: center;
 
   border-radius: 10px;
-  border: 3px solid #ce6a6a;
-  background-color: #ec9f9f;
 `;
 
 export const Title = styled.h1`

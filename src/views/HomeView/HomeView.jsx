@@ -3,11 +3,6 @@ import { Container, Title } from './HomeView.styled';
 
 export const HomeView = () => (
   <Container>
-    <Title>
-      Welcome to our page
-      <span role="img" aria-label="Иконка приветствия">
-        💁‍♀️
-      </span>
-    </Title>
+    <Title>Welcome to your phonebook</Title>
   </Container>
 );
