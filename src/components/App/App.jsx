@@ -1,22 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Switch } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-// import { HomeView } from '../../views/HomeView';
-import { RegisterView } from '../../views/RegisterView/RegisterView';
-import { LoginView } from '../../views/LoginView/LoginView';
+import { RegisterView } from '../../views/RegisterView';
+import { LoginView } from '../../views/LoginView';
 import { ContactsView } from '../../views/ContactsView';
 import { AppBar } from '../AppBar/AppBar';
 import { authOperations, authSelectors } from '../../redux/auth';
 import PrivateRoute from '../routes/PrivateRoute';
 import PublicRoute from '../routes/PublicRoute';
 import { Container } from './App.styled';
-import ReportStatistic from '../ReportStatistics/ReportStatistics';
-import ModalOut from '../modal/modal';
 
 export default function App() {
-  const [costs, setCosts] = useState([]);
-  const [income, setIncome] = useState([]);
-
   const dispatch = useDispatch();
   const isRefreshing = useSelector(authSelectors.getIsRefreshing);
 
@@ -28,12 +22,8 @@ export default function App() {
     !isRefreshing && (
       <Container>
         <AppBar />
-        <ModalOut title="Really?" />
         <Switch>
-          <PublicRoute exact path="/">
-            {/* <HomeView /> */}
-            <ReportStatistic costs={costs} income={income} />
-          </PublicRoute>
+          <PublicRoute exact path="/"></PublicRoute>
 
           <PublicRoute path="/register" restricted>
             <RegisterView />
