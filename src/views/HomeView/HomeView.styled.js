@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #81aa88;
 `;
 
 export const Title = styled.h1`

@@ -1,0 +1,9 @@
+body {
+  background-image: url('../../images/pexels-andrea-piacquadio-3755618.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+}

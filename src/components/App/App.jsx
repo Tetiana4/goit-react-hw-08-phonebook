@@ -9,7 +9,7 @@ import { authOperations, authSelectors } from '../../redux/auth';
 import PrivateRoute from '../routes/PrivateRoute';
 import PublicRoute from '../routes/PublicRoute';
 import { Container } from './App.styled';
-
+import './index.css';
 export default function App() {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(authSelectors.getIsRefreshing);

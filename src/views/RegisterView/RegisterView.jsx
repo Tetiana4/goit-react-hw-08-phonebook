@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../../redux/auth';
-import { Form, Label, Title, Button } from './RegisterView.styled';
+import { Form, Label, Title, Button, Container } from './RegisterView.styled';
 
 export const RegisterView = () => {
   const dispatch = useDispatch();
@@ -31,7 +31,7 @@ export const RegisterView = () => {
   };
 
   return (
-    <div>
+    <Container>
       <Title>Registration</Title>
 
       <Form onSubmit={handleSubmit} autoComplete="off">
@@ -62,6 +62,6 @@ export const RegisterView = () => {
 
         <Button type="submit">Sign up</Button>
       </Form>
-    </div>
+    </Container>
   );
 };
