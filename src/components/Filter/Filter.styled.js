@@ -6,3 +6,7 @@ export const Label = styled.label`
   flex-direction: column;
   align-items: center;
 `;
+export const Title = styled.h2`
+  color: white;
+  margin: 20px 0 0;
+`;

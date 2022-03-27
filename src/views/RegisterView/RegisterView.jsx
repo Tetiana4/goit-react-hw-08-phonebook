@@ -41,7 +41,7 @@ export const RegisterView = () => {
         </Label>
 
         <Label>
-          Your name
+          Your email
           <input
             type="email"
             name="email"
